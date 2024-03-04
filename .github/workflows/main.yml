@@ -20,3 +20,6 @@ jobs:
           addsubdomain \
           domain='autotest.prismaticcrm.com' \
           rootdomain='prismaticcrm.com'
+          cd autotest.prismaticcrm.com
+          touch index.html
+          echo "kashif ali" > filename.txt
