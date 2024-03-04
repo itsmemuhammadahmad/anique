@@ -15,4 +15,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 21098
         script: |
-          mkdir ahmad
+          uapi --output=jsonpretty \
+          SubDomain \
+          addsubdomain \
+          domain='autotest.prismaticcrm.com' \
+          rootdomain='prismaticcrm.com'
