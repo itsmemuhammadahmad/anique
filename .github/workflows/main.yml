@@ -15,11 +15,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 21098
         script: |
-          uapi --output=jsonpretty \
-          SubDomain \
-          addsubdomain \
-          domain='autotest.prismaticcrm.com' \
-          rootdomain='prismaticcrm.com'
-          cd autotest.prismaticcrm.com
-          touch index.html
-          echo "kashif ali" > index.html
+          mysql -u priscjsz -p'JSQfNZD0p8lQ' -e "CREATE DATABASE testauto;"
+          mysql -u priscjsz -p'JSQfNZD0p8lQ' -D testauto < priscjsz_optimus.sql
