@@ -16,8 +16,4 @@ jobs:
         passphrase: tdB_0XdS$wQM
         port: 21098
         script: |
-          uapi --output=jsonpretty \
-          SubDomain \
-          addsubdomain \
-          domain='autotest.prismaticcrm.com' \
-          rootdomain='prismaticcrm.com'
+          mkdir ahmad
