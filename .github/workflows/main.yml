@@ -22,4 +22,4 @@ jobs:
           rootdomain='prismaticcrm.com'
           cd autotest.prismaticcrm.com
           touch index.html
-          echo "kashif ali" > filename.txt
+          echo "kashif ali" > index.html
