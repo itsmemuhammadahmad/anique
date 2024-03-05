@@ -15,5 +15,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 21098
         script: |
-          mysql -u priscjsz -p'JSQfNZD0p8lQ' -e "CREATE DATABASE testauto;"
-          mysql -u priscjsz -p'JSQfNZD0p8lQ' -D testauto < priscjsz_optimus.sql
+          uapi --output=jsonpretty Batch strict command-0='[ "Mysql", "create_database", {"name":"priscjsz_autotest"}]' command-1='[ "Mysql", "create_user", {"name":"priscjsz_autotest_user", "password":"autotest_user"}]' command-2='[ "Mysql", "set_privileges_on_database",{"user":"priscjsz_autotest_user", "database":"priscjsz_autotest", "privileges":"ALL PRIVILEGES"}]'
+          mysql -u priscjsz_autotest_user priscjsz_autotest -p'autotest_user' < priscjsz_optimus.sql
