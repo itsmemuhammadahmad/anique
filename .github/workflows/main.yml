@@ -21,7 +21,7 @@ jobs:
           domain='autotest.prismaticcrm.com' \
           rootdomain='prismaticcrm.com'
           cd autotest.prismaticcrm.com
-          git clone https://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@github.com/itsmemuhammadahmad/test_cicd.git
+          git clone https://github.com/itsmemuhammadahmad/anique.git
           composer install
           touch .env
           echo "APP_NAME='GetMovers'
@@ -70,7 +70,7 @@ jobs:
                 
                 STRIPE_KEY=pk_test_51Hla3sJbeDo0wh2dUz61eCPFRon7FP1ryS6eQjnkmwPSopGofXx8ixqehkGtTaHxEa7p6R2mXzfEGVOrWo0U6zaQ00mfd2Y5Ce
                 STRIPE_SECRET=sk_test_51Hla3sJbeDo0wh2dkkpUvDGfNN4pgcC7jjQIeTZwm5cSJzBgGPFyFDRs8Lgs3KAbr9SWgWeckVLukB4zxf025qeg00KxIqryLt " > .env
-                mv priscddb_luggage.sql /home/priscjsz
+                
                 cd ..
                 uapi --output=jsonpretty Batch strict command-0='[ "Mysql", "create_database", {"name":"priscjsz_autotest"}]' command-1='[ "Mysql", "create_user", {"name":"priscjsz_autotest_user", "password":"autotest_user"}]' command-2='[ "Mysql", "set_privileges_on_database",{"user":"priscjsz_autotest_user", "database":"priscjsz_autotest", "privileges":"ALL PRIVILEGES"}]'
-                mysql -u priscjsz_autotest_user priscjsz_autotest -p'autotest_user' < priscddb_luggage.sql
+                mysql -u priscjsz_autotest_user priscjsz_autotest -p'autotest_user' < priscjsz_optimus.sql
