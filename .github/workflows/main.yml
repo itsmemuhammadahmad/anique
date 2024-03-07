@@ -21,7 +21,7 @@ jobs:
           domain='autotest.prismaticcrm.com' \
           rootdomain='prismaticcrm.com'
           cd autotest.prismaticcrm.com
-          git clone https://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@github.com/kashif-pris/getmover.git
+          git clone https://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@github.com/itsmemuhammadahmad/test_cicd.git
           composer install
           touch .env
           echo "APP_NAME='GetMovers'
